@@ -17,7 +17,7 @@ def check_login(username, password):
         time_passed = time.time() - lockout_start
         if time_passed < lockout_time:
             remaining_time = lockout_time - int(time_passed)
-            print("Account locked. Try again in {remaining_time} seconds.")
+            print(f"Account locked. Try again in {remaining_time} seconds.")
             return False
         else:
             
